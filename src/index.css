@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Serif+HK:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background-color: #F9F9F9;
+    --text-color: #333333;
+    --primary-color: #6BBE45;
+    --secondary-color: #FF6F61;
+    --hover-color: #5AAE3D;
+}
+
+#root {
+    padding: 0% 5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+button {
+    background-color:rgb(210, 210, 210);
+    color: #242121;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+thead th {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+header h1{
+    overflow: hidden;
+}
+
+header button {
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    margin-top: 20px;
+}
+
+header .logo{
+    width: 100px;
+    height: auto
+}
+
+.nav-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.nav-container-align-left {
+    display: flex;
+    text-align: left;
+}
+
+.nav-container-align-right {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-container-align-right span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border: 1px solid hsl(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 250px;
+    display: inline-block
+}
+
+.card .card-image{
+    max-width: 80%;
+    height:auto;
+}
+
+.card .card-title {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: hsl(0, 19%, 31%);
+}
+
+.card-cart{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* margin-top: 10px; */
+    margin-left: 5%;
+}
+
+.card .card-text {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    color: hsl(0, 0%, 30%);
+}
+
+.card-cart input{
+    padding: 4px 5px;
+    border: 1px solid hsl(0, 0%, 70%);
+    width: 30px;
+    margin: 0px;
+    text-align: center;
+}
+
+.card-amount-modify-button {
+    padding: 5px 12px;
+    background-color: hsl(0, 0%, 80%);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card-amount-modify-button:hover {
+    background-color: hsl(0, 0%, 70%);
+}
+
+.card-amount-decrease-button {
+    border-radius: 30% 0% 0% 30%;
+}
+
+.card-amount-increase-button {
+    border-radius: 0% 30% 30% 0%;
+}
+
+.card-add-to-cart-button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: hsl(40, 94%, 58%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-add-to-cart-button:hover {
+    background-color: hsl(110, 40%, 50%);
+}
+
+/* address form */
+
+.delivery-address-form {
+    max-width: 45%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.delivery-address-form form {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.delivery-address-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form .button-wrapper {
+    display: flex; 
+    justify-content: flex-end; 
+    width: 100%; 
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin: 10px 20px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 91%; 
+    margin: 10px 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.delivery-address-form form {
+    display: flex;
+    flex-direction: column; 
+    align-items:self-start; 
+    padding: 20px; 
+}
+
+form .checkout-next-button{
+    display: block;
+    margin-left: auto
+}
+
+.checkoutMessage {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333333;
+}
+
+.shipping-pack-image{
+    width: 20%;
+    height: auto;
+    margin: 20px auto; 
+    display: block; 
+}
+
+
+
