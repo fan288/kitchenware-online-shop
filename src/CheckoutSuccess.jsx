@@ -15,7 +15,6 @@ function CheckoutSuccess({ setComponent}) {
       <div className="checkoutMessage">
         <h2>Checkout Successfully!</h2>
 
-        {/* Progress Bar */}
         <ProgressBar steps={steps} currentStep={currentStep} />
 
         <p className='checkoutThankMessage'>Thank you for your purchase!</p>
@@ -24,12 +23,11 @@ function CheckoutSuccess({ setComponent}) {
         <img src='./src/assets/shippingPack.avif' alt='Shipping Pack' className='shipping-pack-image'></img>
 
         <p>We hope you enjoy your kitchenwares!</p>
-  
-        {/* Add a button to return to the home page */}
+
         <button 
           className="checkout-return-button" 
           onClick={() => {
-            setComponent(<Card />); // Redirect to the Card component
+            setComponent(<Card />); 
           }}
         >
           Return to Home

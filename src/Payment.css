@@ -1,19 +1,19 @@
 .payment-container {
-    display: flex; /* Use flexbox for layout */
-    gap: 50px; /* Add spacing between payment information and summary */
+    display: flex;
+    gap: 50px;
     justify-content: center;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-.payment-container h2{
+.payment-container h2 {
     text-align: center;
 }
 
 .payment-container-flex {
-    flex: 1; /* Use flexbox for layout */
-    gap: 30px; /* Add spacing between payment information and summary */
+    flex: 1;
+    gap: 30px;
 }
 
 .payment-information {
@@ -26,77 +26,73 @@
 
 .card-logo {
     width: 80px;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     padding: 10px 5px 0 5px;
-    margin-bottom: 10px; /* Add space below the logo */
+    margin-bottom: 10px;
 }
 
-.payment-form-group input{
-    padding: 10px; /* Add padding inside the inputs */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Add rounded corners */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+.payment-form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.name-input-container{
-    display: flex; /* Use flexbox for layout */
-    gap: 10px; /* Add spacing between first and last name inputs */
+.name-input-container {
+    display: flex;
+    gap: 10px;
 }
 
-.name-input-container div{
-    flex: 1; /* Ensure both inputs take equal space */
+.name-input-container div {
+    flex: 1;
     width: 500px;
 }
 
-.name-input-container > div input{
-    width: 170px
+.name-input-container > div input {
+    width: 170px;
 }
 
 .card-number-input {
-    width: 350px
+    width: 350px;
 }
 
-.expiry-date-input{
-    display: flex; /* Use flexbox for layout */
-    gap: 10px; /* Add spacing between month and year inputs */
+.expiry-date-input {
+    display: flex;
+    gap: 10px;
 }
 
-.expiry-date-input input{
-    flex: 1; /* Ensure both inputs take equal space */
-    padding: 10px; /* Add padding inside the inputs */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Add rounded corners */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+.expiry-date-input input {
+    flex: 1;
+    padding: 10px;
 }
 
 .credit-card-container {
-    display: flex; /* Use flexbox for layout */
-    gap: 20px; /* Add spacing between credit card options */
+    display: flex;
+    gap: 20px;
 }
 
 .credit-card-container div {
-    cursor: pointer; /* Change cursor to pointer */
+    cursor: pointer;
     padding: 10px;
-    border: 2px solid transparent; /* Default border */
-    border-radius: 5px; /* Rounded corners */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
 }
 
 .credit-card-container label {
-    display: flex; /* Make labels take equal space */
-    flex-direction: column-reverse; /* Stack radio button below the logo */
-    align-items: center; /* Center-align content */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 .credit-card-container div.selected {
-    border-color: #2a9df4 /* Highlight selected card with blue border */
+    border-color: #2a9df4;
 }
 
 .credit-card-info-container {
-    margin: 20px 0; /* Add margin above and below the credit card info */
+    margin: 20px 0;
 }
 
-/*  */
 
 .payment-summary {
     max-width: 300px;;
@@ -114,24 +110,24 @@
 }
 
 .payment-summary table {
-    width: 100%; /* Make the table span the full width */
-    border-collapse: collapse; /* Remove gaps between borders */
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .payment-summary table td {
-    padding: 20px 0 20px 0; /* Add padding inside cells */
+    padding: 20px 0 20px 0;
 }
 
 .payment-summary table td:first-child {
-    text-align: left; /* Left-align the title */
+    text-align: left;
 }
 
 .payment-summary table td:last-child {
-    text-align: right; /* Right-align the numbers */
+    text-align: right;
 }
 
 .payment-summary .payment-grand-total-number {
     font-size: 25px;
-    font-weight: bold; /* Make the grand total bold */
-    color: #333333; /* Use the primary color for emphasis */
+    font-weight: bold;
+    color: #333333;
 }

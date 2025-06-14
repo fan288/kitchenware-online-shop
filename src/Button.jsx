@@ -1,6 +1,6 @@
 function Button({ buttonName, setComponent, newComponent }) {
     const handleClick = () => {
-        setComponent(newComponent); // Update the displayed component
+        setComponent(newComponent); 
     };
 
     return (

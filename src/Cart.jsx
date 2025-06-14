@@ -23,16 +23,13 @@ function Cart({ cart, setCart, setComponent, setCheckoutAmountDetails}) {
 
     const handleCheckout = () => {
         const checkoutAmountDetails = [subtotal, shippingFee, salesTax, grandTotal];
-        setCheckoutAmountDetails(checkoutAmountDetails); // Update checkoutAmountDetails
+        setCheckoutAmountDetails(checkoutAmountDetails);
         setComponent(<ReviewOrder cart={cart} checkoutAmountDetails={checkoutAmountDetails} setComponent={setComponent} />);
     };
 
-    // const checkoutAmountDetails = [subtotal, shippingFee, salesTax, grandTotal]
-    // window.checkoutAmountDetails = checkoutAmountDetails;
-
     return (
         <div className="cart-title">
-            <h2 className=''>{`Your Cart (${cart.length} item)`}</h2>
+            <h2>{`Your Cart (${cart.length} item)`}</h2>
             {cart.length === 0 ? (
                 <p>Your cart is empty.</p>
             ) : (

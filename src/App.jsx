@@ -1,6 +1,5 @@
 import Header from './Header';
 import Footer from './Footer';
-// import Kichenware from './Kitchenwares.js'
 import Card from './Card';
 import Cart from './Cart';
 import Login from './Login.jsx';
@@ -11,6 +10,7 @@ import Payment from './Payment.jsx';
 import CheckoutSuccess from './CheckoutSuccess.jsx';
 import OrderRecord from './OrderRecord.jsx';
 import Registry from './Registry.jsx';
+import AboutUs from './AboutUs.jsx';
 import { useState, useEffect } from 'react';
 
 function App(){
@@ -20,32 +20,12 @@ function App(){
     const [cart, setCart] = useState(() => {
         // Retrieve cart from localStorage if it exists
         const savedCart = localStorage.getItem('cart');
-        return savedCart ? JSON.parse(savedCart) : []; // Default to an empty array if no cart exists
+        return savedCart ? JSON.parse(savedCart) : []; 
     });
 
-    // Effect to save cart to localStorage whenever it changes
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cart));
     }, [cart]);
-
-    // const addToCart = (product) => {
-    //     setCart((prevCart) => {
-    //         const existingProduct = prevCart.find((item) => item.id === product.id);
-    //         if (existingProduct) {
-    //             // Update the amount if the product is already in the cart
-    //             return prevCart.map((item) =>
-    //                 item.id === product.id
-    //                     ? { ...item, 
-    //                         amount: item.amount + product.amount,
-    //                     }
-    //                     : item
-    //             );
-    //         } else {
-    //             // Add the product to the cart
-    //             return [...prevCart, product];
-    //         }
-    //     });
-    // };
 
     const addToCart = (product) => {
         setCart((prevCart) => {
@@ -79,7 +59,6 @@ function App(){
     return(
         <>
 
-            {/* Pass the cart and setComponent function to Header */}
             <Header setComponent={setCurrentComponent} cart={cart} />
             
             <main>
@@ -116,13 +95,14 @@ function App(){
                 ) : currentComponent.type === OrderRecord ? (
                     <OrderRecord 
                         orderRecord={orderRecord}
-                        // setOrderRecord={setOrderRecord}
-                        // orderRecords={orderRecord}
+
                     />
                 ) : currentComponent.type === Login ? (
                     <Login setComponent={setCurrentComponent} />
                 ) : currentComponent.type === Registry ? (
                     <Registry setComponent={setCurrentComponent} />
+                ) : currentComponent.type === AboutUs ? (
+                    <AboutUs setComponent={setCurrentComponent} />
                 ) : (
                     currentComponent
                 )}

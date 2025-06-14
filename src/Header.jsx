@@ -3,21 +3,21 @@ import Cart from './Cart.jsx';
 import Card from './Card.jsx';
 import Login from './Login.jsx';
 import OrderRecord from './OrderRecord.jsx';
+import AboutUs from './AboutUs.jsx';    
 
 function Header({ setComponent, cart}) {
 
     return(
         <header>
-            <h1>Welcome to Homecook Heaven!</h1>
             <nav>
                 <div className="nav-container">
                     <div className="nav-container-align-left">
-                        <img src="./src/assets/logo2.png" 
+                        <img src="./src/assets/logo.png" 
                             alt="Homecook Heaven Logo"
                             className='logo'
                         ></img>
 
-                        {/* <p style={{textAlign: 'left'}}>Welcome to Homecook Heaven!</p> */}
+                        <h1 style={{fontSize:'50px', margin:'0px 20px', paddingTop: '20px'}}>Cook Heaven</h1>        
 
                     </div>
 
@@ -29,7 +29,25 @@ function Header({ setComponent, cart}) {
                                         xmlns="http://www.w3.org/2000/svg" 
                                         width="30" 
                                         height="30" 
-                                        fill="grey" 
+                                        fill="currentColor" 
+                                        class="bi bi-info-circle-fill" 
+                                        viewBox="0 0 16 16">
+                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+                                    </svg>
+                                    About Us
+                                </span>
+                            }
+                            setComponent={setComponent} 
+                            newComponent={<AboutUs />} 
+                        />
+                        <Button 
+                            buttonName={
+                                <span>
+                                    <svg 
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        width="30" 
+                                        height="30" 
+                                        fill="currentColor" 
                                         class="bi bi-house-door-fill" 
                                         viewBox="0 0 16 16"
                                     >
@@ -49,7 +67,7 @@ function Header({ setComponent, cart}) {
                                         xmlns="http://www.w3.org/2000/svg" 
                                         width="30"
                                         height="30" 
-                                        fill= "grey" 
+                                        fill= "currentColor" 
                                         class="bi bi-cart4" 
                                         viewBox="0 0 16 16"
                                     >
@@ -89,7 +107,7 @@ function Header({ setComponent, cart}) {
                                         xmlns="http://www.w3.org/2000/svg" 
                                         width="30" 
                                         height="30" 
-                                        fill="grey" 
+                                        fill="currentColor" 
                                         class="bi bi-person-circle" 
                                         viewBox="0 0 16 16">
                                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>

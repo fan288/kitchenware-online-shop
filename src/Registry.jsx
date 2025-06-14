@@ -10,10 +10,8 @@ function Registry({ setComponent }) {
     const handleRegistry = (e) => {
         e.preventDefault();
 
-        // Retrieve existing members from localStorage
         const members = JSON.parse(localStorage.getItem('members')) || [];
 
-        // Check if the username already exists
         const existingMember = members.find((m) => m.username === username);
         if (existingMember) {
             setError('Username already exists. Please choose a different username.');
@@ -21,10 +19,9 @@ function Registry({ setComponent }) {
             return;
         }
 
-        // Add the new member
         const newMember = { username, password };
         members.push(newMember);
-        localStorage.setItem('members', JSON.stringify(members)); // Save to localStorage
+        localStorage.setItem('members', JSON.stringify(members));
 
         setError('');
         setSuccess('Registration successful! You can now log in.');

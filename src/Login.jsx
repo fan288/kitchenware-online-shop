@@ -11,7 +11,6 @@ function Login({ setComponent }) {
         e.preventDefault();
 
         const members = JSON.parse(localStorage.getItem('members')) || [];
-        console.log('Retrieved members:', members); // Debugging
 
         const member = members.find(
             (m) => m.username === username && m.password === password

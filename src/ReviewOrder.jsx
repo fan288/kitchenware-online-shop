@@ -22,10 +22,8 @@ function ReviewOrder({ cart, checkoutAmountDetails, setComponent }) {
     <div className="review-order">
       <h2>Review Your Order</h2>
 
-      {/* Progress Bar */}
       <ProgressBar steps={steps} currentStep={currentStep} />
 
-      {/* Order List */}
       <table className='order-summary-table'>
         <thead>
           <tr>
@@ -57,7 +55,6 @@ function ReviewOrder({ cart, checkoutAmountDetails, setComponent }) {
                   <tr>
                       <td>Shipping Fee:</td>
                       <td>${parseFloat(shippingFee).toFixed(2)}</td>
-                      {/* <td>${shippingFee}</td> */}
                   </tr>
                   <tr>
                       <td>Sales Tax (10%):</td>

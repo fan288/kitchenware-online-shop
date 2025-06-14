@@ -14,19 +14,17 @@ function Delivery({ setComponent }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Address submitted');
-    setComponent(<Payment />); // Navigate to Payment component
+    setComponent(<Payment />);
   };
 
   return (
     <div>
       <h2>Delivery Information</h2>
-      {/* Progress Bar */}
       <ProgressBar steps={steps} currentStep={currentStep} />
 
       <div className="delivery-address-form">
         <h2>Delivery Address</h2>
 
-        {/* Address Form */}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
               <label htmlFor="name">Name:</label>
@@ -54,10 +52,10 @@ function Delivery({ setComponent }) {
                 type="text" 
                 id="postalCode" 
                 name="postalCode" 
-                maxLength="7" /* Limit input to 7 characters */
-                pattern="\d{1,7}" /* Ensure only digits are allowed */
-                title="Postal Code must be up to 7 digits" /* Tooltip for invalid input */
-                placeholder="1234567" /* Placeholder for user guidance */
+                maxLength="7" 
+                pattern="\d{1,7}" 
+                title="Postal Code must be up to 7 digits" 
+                placeholder="1234567" 
                 required 
             />
           </div>
@@ -67,7 +65,6 @@ function Delivery({ setComponent }) {
               <input type="text" id="country" name="country" required />
           </div>
 
-          {/* Button Wrapper */}
           <div className="button-wrapper">
               <button type="submit" className="checkout-next-button">
                   Next
