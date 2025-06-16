@@ -1,0 +1,74 @@
+.register-container{
+    display: flex;
+    border-radius: 10px;
+}
+
+.register-container > :nth-child(1) img {
+    min-width: 826px;
+    max-width: 100%; 
+    height: auto;   
+    border-radius: 10px;
+}
+
+.register-input-div {
+    padding: 50px;
+    box-shadow: 5px 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    border-radius: 10px;
+    background-color:rgb(246, 245, 245);
+}
+
+.register-logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.register-logo-div img{
+    width: 30%;
+    text-align: center;
+}
+
+.register-container > :nth-child(1){
+    margin: 0px 20px;
+    flex: 3; 
+}
+
+.register-container > :nth-child(2){
+    flex: 7; 
+}
+
+.register-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ffffff ;
+    border-bottom: 1px solid #ccc ;
+    border-radius: 5px;
+}
+
+.register-button-div {
+    text-align: center;
+}
+
+.register-button-div button {
+    margin: 10px;
+    border-radius: 100px;
+    padding: 10px 0px;
+    width: 150px;
+    background-color: rgb(54, 69, 79);
+    color: white;
+    align-items: center;
+
+}
+
+.register-button-div button:hover {
+    background-color: rgb(65, 101, 124);
+    color: white;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}

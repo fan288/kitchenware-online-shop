@@ -24,7 +24,7 @@ function ReviewOrder({ cart, checkoutAmountDetails, setComponent }) {
 
       <ProgressBar steps={steps} currentStep={currentStep} />
 
-      <table className='order-summary-table'>
+      <table className='cart-table'>
         <thead>
           <tr>
             <th>Item</th>
@@ -36,7 +36,7 @@ function ReviewOrder({ cart, checkoutAmountDetails, setComponent }) {
         <tbody>
           {cart.map((cartItem) =>  (
               <tr key={cartItem.id}>
-                <td>{cartItem.name}</td>
+                <td className='cart-td-product-name'>{cartItem.name}</td>
                 <td>${cartItem.price}</td>
                 <td>{cartItem.amount}</td>
                 <td>${parseFloat(cartItem.total).toFixed(2)}</td>

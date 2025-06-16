@@ -4,7 +4,7 @@ function AboutUs() {
     <div className="about-us">
         <h1>About Us</h1>
         <div className="about-us-container">
-            <img src="./src/assets/utensilsPoster.jpeg" alt="About Us Poster" />
+            <img src="./src/assets/AboutUsUtensilsPoster.jpeg" alt="About Us Poster" />
             <div className="about-us-container-text"> 
                 <h3>Welcome to Cook Heaven</h3>
                 <p>
@@ -34,7 +34,7 @@ function AboutUs() {
 
                 <br></br>
                 <h3>Sustainability Commitment</h3>
-                <img src="./src/assets/utensilsSustainability.jpeg" alt="About Us Sustainable Utensils" />
+                <img src="./src/assets/AboutUsUtensilsSustainability.jpeg" alt="About Us Sustainable Utensils" />
                 <p>
                     We are committed to sustainability and strive to minimize our environmental impact. At Cook Heaven,
                     we prioritize sourcing products made from eco-friendly materials and promoting practices that reduce 

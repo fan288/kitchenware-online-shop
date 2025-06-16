@@ -5,13 +5,12 @@ import React, { useState } from 'react';
 
 
 function Payment({ cart, checkoutAmountDetails, setCheckoutAmountDetails, setComponent, setCart, setOrderRecord }) {
-    const [subtotal, shoppingFee, salesTax, grandTotal] = checkoutAmountDetails;
+    const [subtotal, shippingFee, salesTax, grandTotal] = checkoutAmountDetails;
 
     const [selectedCard, setSelectedCard] = useState('visa'); 
     const handleCardSelect = (cardType) => {
       setSelectedCard(cardType); 
     };
-  
 
   const handleSubmit = (e) => {
     const formatTimestamp = () => {
@@ -37,7 +36,10 @@ function Payment({ cart, checkoutAmountDetails, setCheckoutAmountDetails, setCom
       id: Date.now(),
       timestamp: formatTimestamp(),
       items: [...cart], 
-      total: grandTotal, 
+      subtotal,
+      shippingFee,
+      salesTax,
+      grandTotal,
     };
 
     setOrderRecord((prevOrders) => [newOrder, ...prevOrders]);
@@ -71,19 +73,19 @@ function Payment({ cart, checkoutAmountDetails, setCheckoutAmountDetails, setCom
                     className={`visa-card ${selectedCard === 'visa' ? 'selected' : ''}`}
                     onClick={() => handleCardSelect('visa')}
                 >
-                    <img src="./src/assets/visaCardLogo.png" alt="Visa" className="card-logo" />
+                    <img src="./src/assets/paymentVisaCardLogo.png" alt="Visa" className="card-logo" />
                 </div>
                 <div
                     className={`mastercard-card ${selectedCard === 'mastercard' ? 'selected' : ''}`}
                     onClick={() => handleCardSelect('mastercard')}
                 >
-                    <img src="./src/assets/masterCardLogo.jpg" alt="MasterCard" className="card-logo" />
+                    <img src="./src/assets/paymentMasterCardLogo.jpg" alt="MasterCard" className="card-logo" />
                 </div>
                 <div
                     className={`amex-card ${selectedCard === 'amex' ? 'selected' : ''}`}
                     onClick={() => handleCardSelect('amex')}
                 >
-                    <img src="./src/assets/americaExpressCardLogo.jpg" alt="American Express" className="card-logo" />
+                    <img src="./src/assets/paymentAmericaExpressCardLogo.jpg" alt="American Express" className="card-logo" />
                 </div>
               </div>
 
@@ -176,8 +178,8 @@ function Payment({ cart, checkoutAmountDetails, setCheckoutAmountDetails, setCom
                                 <td>${subtotal.toFixed(2)}</td>
                             </tr>
                             <tr>
-                                <td>Shopping Fee:</td>
-                                <td>${shoppingFee.toFixed(2)}</td>
+                                <td>Shipping Fee:</td>
+                                <td>${shippingFee.toFixed(2)}</td>
                             </tr>
                             <tr>
                                 <td>Sales Tax:</td>

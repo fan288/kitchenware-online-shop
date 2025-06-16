@@ -10,26 +10,26 @@ const Kichenwares = [
 
     {
         id: 2,
-        name: "Flying Pan 2",
-        description: "This is flying pan 1.",
-        image: "./src/assets/id001-fryingPan.jpeg",
-        price: 19.99
+        name: "Pure Curry & Pasta Bowl",
+        description: "Made by AXCIS,INC.",
+        image: "./src/assets/kitchenwares/id002-AxcisBowl.webp",
+        price: 259.00
     },
 
     {
         id: 3,
-        name: "Flying Pan 3",
-        description: "This is flying pan 1.",
-        image: "./src/assets/id001-fryingPan.jpeg",
-        price: 19.99
+        name: "Moderato Tea Pot (Gary)",
+        description: "Made by CERAMIC JAPAN",
+        image: "./src/assets/kitchenwares/id003-ceramicJapanModeratoTeaPotGary.webp",
+        price: 429.00
     },
 
     {
         id: 4,
-        name: "Flying Pan 4",
-        description: "This is flying pan 1.",
-        image: "./src/assets/id001-fryingPan.jpeg",
-        price: 19.99
+        name: "Acacia Small Spoon Oil Finish",
+        description: "25S Acacia 11cm. spoon suitable for desserts such as ice cream. It is also made from lightweight acacia wood and finished with an oil coating.",
+        image: "./src/assets/kitchenwares/id004-smallSpoonOilFinish.jpg",
+        price: 18.00
     },
 
     {

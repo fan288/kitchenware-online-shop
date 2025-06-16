@@ -20,7 +20,10 @@ function CheckoutSuccess({ setComponent}) {
         <p className='checkoutThankMessage'>Thank you for your purchase!</p>
         <p>We've received your order will ship in 2-5 business days.</p>
 
-        <img src='./src/assets/shippingPack.avif' alt='Shipping Pack' className='shipping-pack-image'></img>
+        <img 
+          src='./src/assets/checkoutSuccessShippingPack.gif' 
+          alt='Shipping Pack' className='shipping-pack-image'>
+        </img>
 
         <p>We hope you enjoy your kitchenwares!</p>
 

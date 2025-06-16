@@ -27,6 +27,67 @@ function Cart({ cart, setCart, setComponent, setCheckoutAmountDetails}) {
         setComponent(<ReviewOrder cart={cart} checkoutAmountDetails={checkoutAmountDetails} setComponent={setComponent} />);
     };
 
+    const handleIncrement = (id) => {
+        setCart((prevCart) =>
+            prevCart.map((item) =>
+                item.id === id
+                    ? {
+                          ...item,
+                          amount: item.amount + 1, 
+                          total: (item.price * (item.amount + 1)).toFixed(2), // Update the total
+                      }
+                    : item
+            )
+        );
+    };
+
+
+    const handleDecrement = (id) => {
+        setCart((prevCart) =>
+            prevCart.map((item) =>
+                item.id === id
+                    ? {
+                          ...item,
+                          amount: item.amount > 1 ? item.amount - 1 : 1, 
+                          total: (item.price * (item.amount > 1 ? item.amount - 1 : 1)).toFixed(2),
+                      }
+                    : item
+            )
+        );
+    };
+
+    const handleInputChange = (id, value) => {
+        if (value === "") {
+            setCart((prevCart) =>
+                prevCart.map((item) =>
+                    item.id === id
+                        ? {
+                              ...item,
+                              amount: "", 
+                              total: 0, 
+                          }
+                        : item
+                )
+            );
+            return;
+        }
+    
+        const numericValue = parseInt(value, 10); 
+        if (!isNaN(numericValue) && numericValue >= 1) {
+            setCart((prevCart) =>
+                prevCart.map((item) =>
+                    item.id === id
+                        ? {
+                              ...item,
+                              amount: numericValue,
+                              total: (item.price * numericValue).toFixed(2), 
+                          }
+                        : item
+                )
+            );
+        }
+    };
+
     return (
         <div className="cart-title">
             <h2>{`Your Cart (${cart.length} item)`}</h2>
@@ -51,20 +112,40 @@ function Cart({ cart, setCart, setComponent, setCheckoutAmountDetails}) {
                         <tbody>
                             {cart.map((cartItem) => (
                                     <tr key={cartItem.id}>
-                                        <td>
-                                            <img 
-                                                src={cartItem.image}
-                                                alt={cartItem.name} 
-                                            />
+                                        <td name='image'>
+                                            <img src={cartItem.image} alt={cartItem.name} />
                                         </td>
-                                        <td className='cart-td-product-name'>{cartItem.name}
+                                        <td name='product name' className='cart-td-product-name'>{cartItem.name}
                                             <p className="cart-product-description">{cartItem.description}</p>
                                         </td>
-                                        <td>${cartItem.price}</td>
-                                        <td>{cartItem.amount}</td>
+                                        <td name='price'>${cartItem.price.toFixed(2)}</td>
+                                        <td>
+                                            <div className='card-cart'>
+                                                <button
+                                                    className="card-amount-modify-button card-amount-decrease-button"
+                                                    onClick={() => handleDecrement(cartItem.id)}
+                                                >
+                                                    -
+                                                </button>
+                                                <input
+                                                    id={cartItem.id}
+                                                    type="numeric"
+                                                    min="1"
+                                                    value={cartItem.amount}
+                                                    onChange={(e) => handleInputChange(cartItem.id, e.target.value)}
+                                                    
+                                                />
+                                                <button
+                                                    className="card-amount-modify-button card-amount-increase-button"
+                                                    onClick={() => handleIncrement(cartItem.id)}
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
+                                        </td>
                                         <td>
                                             <div className='cart-total-price-container'>
-                                                <span>${cartItem.total.toFixed(2)} </span>
+                                                <span name='total'>${cartItem.total} </span>
                                                 <button className="cart-remove-item-button" onClick={() => removeFromCart(cartItem.id)}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" 
                                                         width="20" 

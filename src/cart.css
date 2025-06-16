@@ -74,13 +74,14 @@
 
 .cart-table .cart-td-product-name{
     text-align: left;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     color: #333333;
 }
 
 .cart-table .cart-product-description{
-    font-size: 10px;
+    font-size: 20px;
+    color: #a3a2a2;
 }
 
 .clear-cart-button {
@@ -151,7 +152,7 @@
     gap: 10px;;
     margin-top: 10px; 
     padding: 20px 40px; 
-    background-color: #6BBE45; 
+    background-color: rgb(50, 205, 50); 
     color: #fff; 
     border: none;
     border-radius: 5px; 

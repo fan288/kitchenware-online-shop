@@ -13,7 +13,6 @@ function Delivery({ setComponent }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Address submitted');
     setComponent(<Payment />);
   };
 
