@@ -34,26 +34,26 @@ const Kichenwares = [
 
     {
         id: 5,
-        name: "Flying Pan 5",
-        description: "This is flying pan 1.",
-        image: "./src/assets/id001-fryingPan.jpeg",
-        price: 19.99
+        name: "Porcelain Bowl",
+        description: "Porcelain Plate being used in Café&Meal MUJI. It is sold only in selected stores.",
+        image: "./src/assets/kitchenwares/id005-porcelainBowl.jpg",
+        price: 85.00
     },
 
     {
         id: 6,
-        name: "Flying Pan 6",
-        description: "This is flying pan 1.",
-        image: "./src/assets/id001-fryingPan.jpeg",
-        price: 19.99
+        name: "Rattan Coaster",
+        description: "The coaster is made of hand-knitted ketak grass from Lombok Island in Indonesian. This traditional island material has a fine knit, making it robust and resistant to deformation.",
+        image: "./src/assets/kitchenwares/id006-Rattan Coaster.jpg",
+        price: 28.00
     },
 
     {
         id: 7,
-        name: "Flying Pan 7",
-        description: "This is flying pan 1.",
-        image: "./src/assets/id001-fryingPan.jpeg",
-        price: 19.99
+        name: "Stainless Steel Grater",
+        description: "Simple shape of the grater makes it hard to accumulate dirt. The blade design is ease for holding.",
+        image: "./src/assets/kitchenwares/id007-stainlessSteelGrater.jpg",
+        price: 42.00
     },
 
     {

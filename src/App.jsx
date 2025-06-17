@@ -1,3 +1,4 @@
+import Home from './Home';
 import Header from './Header';
 import Footer from './Footer';
 import Card from './Card';
@@ -16,7 +17,7 @@ import ContactUs from './ContactUs';
 
 function App(){
 
-    const [currentComponent, setCurrentComponent] = useState(<Card />); 
+    const [currentComponent, setCurrentComponent] = useState(<Home />); 
 
     const [cart, setCart] = useState(() => {
         const savedCart = localStorage.getItem('cart');
@@ -63,9 +64,7 @@ function App(){
 
     return(
         <>
-
             <Header setComponent={setCurrentComponent} cart={cart} />
-            
             <main>
                 {currentComponent.type === Cart ? (
                     <Cart 
@@ -116,7 +115,7 @@ function App(){
 
             </main>
 
-            <Footer />
+            <Footer setComponent={setCurrentComponent} />
         </>
     )
 }

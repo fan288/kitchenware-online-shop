@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Serif+HK:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --background-color: #F9F9F9;
+    --background-color: #F5F5F5;
     --text-color: #333333;
     --primary-color: #6BBE45;
     --secondary-color: #FF6F61;
@@ -9,17 +9,25 @@
 }
 
 #root {
-    padding: 0% 5%;
     font-family: 'Roboto', sans-serif;
 }
 
-html, body, #root {
-    height: 100%;
-    margin: 0;
+
+html, body {
+    height: 100%; 
+    margin: 0; 
     display: flex;
     flex-direction: column;
-    background-color: #F5F5F5;
 }
+
+main {
+    flex: 1; 
+    padding: 20px; 
+    background-color: #F5F5F5;
+    min-height: calc(85vh - 80px); 
+        /* force footer in the bottom of cart page if no products added to cart*/
+}
+
 
 html, body {
     height: 100%;
@@ -58,7 +66,7 @@ thead th {
     text-align: center;
     padding: 10px;
     border-bottom: 2px solid #ccc;
-    background-color: #f9f9f9;
+    background-color: #F5F5F5;
 }
 
 tbody td {
@@ -71,11 +79,21 @@ tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-header h1{
+header {
+    background-color: #F5F5F5;
+}
+
+header .header-website-name-container {
+    display: flex;
+    align-items: center;
+
+}
+
+header h1 {
     overflow: hidden;
     font-size:4vw;
     margin: 0px 20px; 
-    padding-top: 20px;
+    /* padding-top: 20px; */
     color: rgb(54, 69, 79)
 }
 
@@ -116,6 +134,21 @@ header .logo{
     gap: 5px
 }
 
+.home-img-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+
+.home-img-container img{
+    display: block;
+    /* margin-top: 10vw; */
+    justify-content: space-evenly;
+    width: 70%;
+
+}
+
 .card {
     width: 200px;
     height: 300px;
@@ -148,6 +181,11 @@ header .logo{
     text-overflow: ellipsis;
     height: calc(1.1em * 2);
 
+}
+
+.card .card-price {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .card-cart{
@@ -276,6 +314,10 @@ form .checkout-next-button{
     display: block; 
 }
 
+.order-detail-word-in-centre{
+    text-align: center;
+}
+
 .order-record-item {
     margin-bottom: 20px;
     border: 1px solid;
@@ -312,6 +354,17 @@ form .checkout-next-button{
     height: auto;
 }
 
+.terms {
+    width:80%;
+}
+
+.terms-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+}
 
 
 

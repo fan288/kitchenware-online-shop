@@ -60,7 +60,7 @@ function Card({ addToCart }) {
                 ></img>
                 <h2 className="card-title">{Kichenware.name}</h2>
                 {/* <p className="card-description">{Kichenware.description}</p> */}
-                <p>{"HK$" + Kichenware.price}</p>
+                <p className="card-price">{"HK$" + Kichenware.price}</p>
 
                 <div className="card-cart">
                     <div>

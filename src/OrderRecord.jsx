@@ -5,9 +5,9 @@ import Payment from './Payment';
 function OrderRecord({ orderRecord =[]}) {
     return (
         <div className="order-records-container">
-            <h2>Order History</h2>
+            <h2 className='order-detail-word-in-centre'>Order Records</h2>
             {orderRecord.length === 0 ? (
-                <p>No orders have been placed yet.</p>
+                <p className='order-detail-word-in-centre'>No orders have been placed yet.</p>
             ) : (
                 orderRecord.map((order) => (
                     <div key={order.id} className="order-record-item">
