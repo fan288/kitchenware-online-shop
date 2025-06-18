@@ -37,7 +37,7 @@ function Login({ setComponent }) {
                 <div >
                     <form className="login-form-group" onSubmit={handleLogin}>
                         <div className="login-form-group-item">
-                            <label htmlFor="username">User Name:</label> 
+                            <label htmlFor="username">Username:</label> 
                             <br></br>
                             <input
                                 type="text"
@@ -76,7 +76,7 @@ function Login({ setComponent }) {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='login-image-container'>
                 <img src='./src/assets/loginUtensilsPicture.jpeg'></img>   
             </div>
         </div>

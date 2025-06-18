@@ -11,7 +11,20 @@ function Registry({ setComponent }) {
         e.preventDefault();
 
         if (username && password) {
-            setError(""); 
+            // setError(""); 
+            const members = JSON.parse(localStorage.getItem('members')) || [];
+
+            const isDuplicate = members.some((member) => member.username === username);
+
+            if (isDuplicate) {
+                setError("Username already exists. Please choose a different username.");
+                return;
+            }
+
+            const newMember = { username, password };
+            members.push(newMember);
+            localStorage.setItem('members', JSON.stringify(members));
+
             alert("Sign-up successful! Please log in."); 
             setComponent(<Login setComponent={setComponent} />);
         } else {
@@ -22,7 +35,7 @@ function Registry({ setComponent }) {
     return (
 
         <div className="register-container">
-            <div>
+            <div className='register-picture-container'>
                 <img src='./src/assets/signUpPicture.webp'></img>   
             </div>
             <div className="register-input-div">
@@ -56,10 +69,8 @@ function Registry({ setComponent }) {
                                 required
                             />
 
-                            {error && <p className="error-message">{error}</p>}
                         </div>
 
-                        
                         <div className='register-button-div register-button-summit-div'>
                             {error && <p className="error-message">{error}</p>}
                             <button type="submit" className="registry-button">Sign Up</button>
@@ -68,7 +79,6 @@ function Registry({ setComponent }) {
 
                     <br></br>
                     <div className='register-button-div'>
-                        <p>Please log in if you already have an account.</p>
                         <button onClick={() => setComponent(<Login setComponent={setComponent} />)} className="registry-button">
                             Back to Login
                         </button>
@@ -76,39 +86,6 @@ function Registry({ setComponent }) {
                 </div>
             </div>
         </div>
-        // <div className="registry-container">
-        //     <h2>Sign Up</h2>
-        //     <form onSubmit={handleRegistry}>
-        //         <div className="form-group">
-        //             <label htmlFor="username">Username:</label>
-        //             <input
-        //                 type="text"
-        //                 id="username"
-        //                 value={username}
-        //                 onChange={(e) => setUsername(e.target.value)}
-        //                 required
-        //             />
-        //         </div>
-        //         <div className="form-group">
-        //             <label htmlFor="password">Password:</label>
-        //             <input
-        //                 type="password"
-        //                 id="password"
-        //                 value={password}
-        //                 onChange={(e) => setPassword(e.target.value)}
-        //                 required
-        //             />
-        //         </div>
-        //         {error && <p className="error-message">{error}</p>}
-        //         <button type="submit" className="registry-button">Sign Up</button>
-        //     </form>
-        //     <button
-        //         onClick={() => setComponent(<Login setComponent={setComponent} />)}
-        //         className="back-to-register-button"
-        //     >
-        //         Back to Login
-        //     </button>
-        // </div>
     );
 }
 

@@ -3,11 +3,19 @@
     border-radius: 10px;
 }
 
-.register-container > :nth-child(1) img {
-    min-width: 826px;
-    max-width: 100%; 
-    height: auto;   
+.register-picture-container {
+    flex: 2;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 0px 20px;
     border-radius: 10px;
+}
+
+.register-picture-container img {
+    width: 1100px;
+    max-width: none; 
+    height: auto;   
+    display: block;
 }
 
 .register-input-div {
@@ -21,6 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;   
+    
 }
 
 .register-logo-div img{
@@ -28,13 +37,8 @@
     text-align: center;
 }
 
-.register-container > :nth-child(1){
-    margin: 0px 20px;
-    flex: 3; 
-}
-
 .register-container > :nth-child(2){
-    flex: 7; 
+    flex: 1; 
 }
 
 .register-container input {
@@ -58,7 +62,6 @@
     background-color: rgb(54, 69, 79);
     color: white;
     align-items: center;
-
 }
 
 .register-button-div button:hover {

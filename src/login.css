@@ -59,6 +59,19 @@
     color: white;
 }
 
+.login-image-container {
+    width: 100%;
+    overflow-x: auto; 
+    white-space: nowrap; 
+}
+
+.login-image-container img {
+    width: auto; 
+    max-width: none;
+    height: auto; 
+    display: block; 
+}
+
 .error-message {
     color: red;
     font-size: 14px;
