@@ -22,7 +22,7 @@ html, body {
 
 main {
     flex: 1; 
-    padding: 20px; 
+    padding: 0 6%; 
     background-color: #F5F5F5;
     min-height: calc(85vh - 80px); 
         /* force footer in the bottom of cart page if no products added to cart*/
@@ -34,11 +34,6 @@ html, body {
     margin: 0;
     display: flex;
     flex-direction: column;
-}
-
-main {
-    flex: 1;
-    padding: 20px;
 }
 
 button {
@@ -151,12 +146,12 @@ header .logo{
 
 .card {
     width: 200px;
-    height: 300px;
+    height: 310px;
     border: 1px solid hsl(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px hsla(0, 0%, 0%, 0.1);
     padding: 20px;
-    margin: 10px;
+    margin: 10px 10px;
     text-align: center;
     max-width: 250px;
     display: inline-block;
@@ -302,7 +297,7 @@ form .checkout-next-button{
 
 .checkoutMessage {
     text-align: center;
-    margin-top: 20px;
+    padding: 20px;
     font-size: 18px;
     color: #333333;
 }

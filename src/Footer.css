@@ -9,7 +9,8 @@ footer {
 }
 
 footer a {
-    margin: 20px 10px;
+    margin: 0 10px;
+    padding: 40px 0 0 0;
     align-items: center;
     text-decoration: none;
     color: rgb(244, 246, 248);
@@ -45,4 +46,5 @@ footer p {
 .footer-copy-right {
     color: rgb(244, 246, 248);
     margin: 0;
+    padding: 20px 0;
 }

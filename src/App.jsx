@@ -64,8 +64,9 @@ function App(){
 
     return(
         <>
-            <Header setComponent={setCurrentComponent} cart={cart} />
             <main>
+                <Header setComponent={setCurrentComponent} cart={cart} />
+                
                 {currentComponent.type === Cart ? (
                     <Cart 
                         cart={cart} 

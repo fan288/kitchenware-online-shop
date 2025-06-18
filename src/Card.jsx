@@ -53,14 +53,16 @@ function Card({ addToCart }) {
 
         Kichenwares.map((Kichenware) => (
             <div className="card" key={Kichenware.id}>
+                <div className='card-top-gap'></div>
                 <img
                     src={Kichenware.image}
                     className="card-image"
                     alt={`${Kichenware.id} - ${Kichenware.name}`}
-                ></img>
+                >
+                </img>
                 <h2 className="card-title">{Kichenware.name}</h2>
                 {/* <p className="card-description">{Kichenware.description}</p> */}
-                <p className="card-price">{"HK$" + Kichenware.price}</p>
+                <p className="card-price">{"HK$ " + Kichenware.price}</p>
 
                 <div className="card-cart">
                     <div>

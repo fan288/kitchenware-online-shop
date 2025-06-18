@@ -81,7 +81,7 @@ function Footer( {setComponent} ) {
                 </svg>
 
             </div>
-            <p className='footer-copy-right'>&copy; {new Date().getFullYear()} Cook Heaven</p>
+            <p className='footer-copy-right'>&copy; {new Date().getFullYear()} Cook Heaven, Inc.</p>
         </footer>
     )
 }

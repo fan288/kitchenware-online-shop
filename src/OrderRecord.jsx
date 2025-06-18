@@ -1,6 +1,5 @@
 import './cart.css';
 import React from 'react';
-import Payment from './Payment';
 
 function OrderRecord({ orderRecord =[]}) {
     return (
